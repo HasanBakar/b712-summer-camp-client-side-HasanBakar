@@ -24,6 +24,14 @@ const Footer = () => {
             </ul>
           </div>
           <div>
+            <span className="footer-title">Contact Us</span>
+            <ul>
+              <li>phone: +8801623-XXXXXX</li>
+              <li>Land line: +774959</li>
+              <li>test@gmail.com</li>
+            </ul>
+          </div>
+          <div>
             <span className="footer-title">Social</span>
             <div className="grid grid-flow-col gap-4">
               <Link to="">
