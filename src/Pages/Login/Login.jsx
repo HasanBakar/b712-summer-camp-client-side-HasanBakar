@@ -1,13 +1,79 @@
 /* eslint-disable react/no-unknown-property */
 import { Link } from 'react-router-dom';
 import { useForm } from "react-hook-form";
-
-const onSubmit = (data) => {
-    console.log(data)};
+import { useContext } from 'react';
+import { toast } from "react-toastify";
+import { Helmet} from "react-helmet-async";
+import { AuthContext } from './../../Providers/AuthProviders';
 
 const Login = () => {
+  const { userLogin, setUser,LoginWithGoogle } = useContext(AuthContext);
+
+  const handleLogin = (data) => {
+    const {email,password} = data
+    userLogin(email, password)
+    .then(result=>{
+      const user = result.user;
+      setUser(user);
+      toast("Your login Successful with Email/Password", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      reset();
+    })
+    .catch(error=>{
+      reset();
+      toast.error(error.message, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    })
+  };
+  const handleGoogleLogin = ()=>{
+    reset()
+    LoginWithGoogle()
+    .then(result=>{
+      const user = result.user;
+      setUser(user);
+      toast("Your login Successful with Google", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    })
+    .catch(error=>{
+      toast.error(error.message, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    })
+  }
       
       const {
+        reset,
         register,
         handleSubmit,
         formState: { errors },
@@ -15,9 +81,16 @@ const Login = () => {
 
     return (
       <>
+        <Helmet>
+          <title>Login | DanceScape</title>
+        </Helmet>
+
         <section className="bg-white dark:bg-gray-900">
-          <div className="container flex items-center justify-center min-h-screen px-6 mx-auto">
-            <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-md">
+          <div className="container flex items-center justify-center my-32 px-6 mx-auto">
+            <form
+              onSubmit={handleSubmit(handleLogin)}
+              className="w-full max-w-md"
+            >
               <h1 className="mt-1 text-2xl font-semibold text-gray-800 capitalize sm:text-3xl dark:text-white">
                 Please Login
               </h1>
@@ -99,7 +172,7 @@ const Login = () => {
                 </p>
 
                 <Link
-                  href="#"
+                  onClick={handleGoogleLogin}
                   className="flex items-center justify-center px-6 py-3 mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
                 >
                   <svg className="w-6 h-6 mx-2" viewBox="0 0 40 40">

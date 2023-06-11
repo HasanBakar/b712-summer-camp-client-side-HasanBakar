@@ -1,27 +1,93 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { FaUser, FaClinicMedical } from "react-icons/fa";
+import { useContext } from 'react';
+import { toast } from "react-toastify";
+import { AuthContext } from './../../Providers/AuthProviders';
+import { Helmet } from 'react-helmet-async';
 
 
-
-
-const onSubmit = (data) => {
-  console.log(data);
-};
 
 const Register = () => {
-
+  
+    const { createUser, setUser, updateUserProfile } = useContext(AuthContext);
     const { reset,formState: { errors },
       register,
       handleSubmit,
-      // formState: { errors },
     } = useForm();
+    const handleRegister = (data) => {
+      const {confirmPassword,email,password, name,photo} = data;
+      if(confirmPassword === password){
+      createUser(email, password)
+      .then(result=>{
+        const LU = result.user;
+        setUser(LU);
+        updateUserProfile(name, photo)
+        .then(()=>{
+           toast("Successfully Registration complete!", {
+             position: "top-center",
+             autoClose: 5000,
+             hideProgressBar: false,
+             closeOnClick: true,
+             pauseOnHover: true,
+             draggable: true,
+             progress: undefined,
+             theme: "light",
+           });
+        })
+        .catch(error=>{
+          toast.error(error.message, {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        })
+       
+        reset();
+      })
+      .catch(error=>{
+        toast.error(error.message, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      })
+      }
+     else{
+     toast.error("Doesn't matched your password!", {
+       position: "top-center",
+       autoClose: 5000,
+       hideProgressBar: false,
+       closeOnClick: true,
+       pauseOnHover: true,
+       draggable: true,
+       progress: undefined,
+       theme: "light",
+     });
+     }
+    };
 
   return (
     <>
+      <Helmet>
+        <title>Register | DanceScape</title>
+      </Helmet>
       <section className="bg-white dark:bg-gray-900">
-        <div className="container flex items-center justify-center min-h-screen px-6 mx-auto">
-          <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-md">
+        <div className="container flex items-center justify-center my-28 px-6 mx-auto">
+          <form
+            onSubmit={handleSubmit(handleRegister)}
+            className="w-full max-w-md"
+          >
             <h1 className="mt-1 text-2xl font-semibold text-gray-800 capitalize sm:text-3xl dark:text-white">
               Please Register
             </h1>

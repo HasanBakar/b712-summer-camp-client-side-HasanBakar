@@ -1,7 +1,39 @@
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 import "./NavBar.css"
+import { toast } from "react-toastify";
+import { useContext } from 'react';
+import { AuthContext } from './../../../Providers/AuthProviders';
 
 const NavBar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogOut = ()=>{
+    logOut()
+    .then(()=>{
+toast("You are successfully LogOut!", {
+  position: "top-center",
+  autoClose: 5000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  theme: "light",
+});
+    })
+    .catch(error=>{
+      toast.error(error.message, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+
+    })
+  }
     
     return (
       <div className="navbar text-2xl font-bold">
@@ -33,9 +65,7 @@ const NavBar = () => {
               <li>
                 <NavLink to="/instructors">Instructors</NavLink>
               </li>
-              <li>
-                <NavLink to="/dashboard">Dashboard</NavLink>
-              </li>
+              <li>{user && <NavLink to="/dashboard">Dashboard</NavLink>}</li>
               <li>
                 <NavLink to="/classes">Classes</NavLink>
               </li>
@@ -60,21 +90,33 @@ const NavBar = () => {
             <li>
               <NavLink to="/instructors">Instructors</NavLink>
             </li>
-            <li>
-              <NavLink to="/dashboard">Dashboard</NavLink>
-            </li>
+            <li>{user && <NavLink to="/dashboard">Dashboard</NavLink>}</li>
             <li>
               <NavLink to="/classes">Classes</NavLink>
             </li>
           </ul>
         </div>
         <div className="navbar-end">
-          <NavLink to="/login" className="btn">
-            Login
-          </NavLink>
-          <NavLink to="/register" className="btn">
-            Register
-          </NavLink>
+          {user ? (
+            <>
+              <Link>
+                <img
+                  className="btn btn-circle btn-outline"
+                  src={user?.photoURL || ""}
+                  alt=""
+                />
+              </Link>
+              <Link onClick={handleLogOut} className="btn">
+                LogOut
+              </Link>
+            </>
+          ) : (
+            <>
+              <NavLink to="/login" className="btn">
+                Login
+              </NavLink>
+            </>
+          )}
         </div>
       </div>
     );

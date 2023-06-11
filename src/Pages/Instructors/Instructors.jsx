@@ -1,10 +1,14 @@
 
+import { Helmet } from 'react-helmet-async';
 
 const Instructors = () => {
     return (
-        <div>
+        <>
+        <Helmet>
+            <title>Instructors | DanceScape</title>
+        </Helmet>
             Instructors component
-        </div>
+        </>
     );
 };
 
