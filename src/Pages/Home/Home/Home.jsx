@@ -1,15 +1,30 @@
-import { useContext } from "react";
-import { AuthContext } from './../../../Providers/AuthProviders';
 import { Helmet } from 'react-helmet-async';
+import Banner from './../Banner/Banner';
+import PopularClasses from './../PopularClasses/PopularClasses';
+
+
+
+
+
 const Home = () => {
-    const {name} = useContext(AuthContext)
+    
+    
     return (
+      <div>
+        <Helmet>
+          <title>Home | DanceScape</title>
+        </Helmet>
         <div>
-            <Helmet>
-                <title>Home | DanceScape</title>
-            </Helmet>
-            I am home component {name}
+          <Banner></Banner>
         </div>
+        <div className="flex justify-center items-center my-10">
+          <div className="text-center">
+            <h3 className="text-3xl font-bold">Popular Classes</h3>
+            <p>You can explore and achieve these!</p>
+          </div>
+        </div>
+        <PopularClasses></PopularClasses>
+      </div>
     );
 };
 

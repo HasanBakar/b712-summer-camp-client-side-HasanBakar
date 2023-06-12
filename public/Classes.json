@@ -1,0 +1,118 @@
+ [
+    {
+      "image": "https://i.ibb.co/N7w558C/banner1.png",
+      "name": "Ballet Dance",
+      "instructor": "John Doe",
+      "seats_available": 10,
+      "price": 99.99,
+      "number_student":29
+    },
+    {
+      "image": "https://i.ibb.co/7XKqn5h/Banner2.jpg",
+      "name": "Contemporary Dance",
+      "instructor": "Jane Smith",
+      "seats_available": 5,
+      "price": 149.99,
+      "number_student":21
+    },
+    {
+      "image": "https://i.ibb.co/Hq5cHfF/banner3.png",
+      "name": "Hip Hop Dance",
+      "instructor": "David Johnson",
+      "seats_available": 8,
+      "price": 79.99,
+      "number_student":24
+    },
+    {
+      "image": "https://i.ibb.co/7Rmm1y0/banner4.png",
+      "name": "Jazz Dance",
+      "instructor": "Sarah Davis",
+      "seats_available": 12,
+      "price": 119.99,
+      "number_student":45
+    },
+    {
+      "image": "https://i.ibb.co/3rFQNM2/banner5.jpg",
+      "name": "Tap Dance",
+      "instructor": "Michael Wilson",
+      "seats_available": 3,
+      "price": 89.99,
+      "number_student":25
+    },
+    {
+      "image": "https://i.ibb.co/Nrs9SzY/banner6.png",
+      "name": "Salsa Dance",
+      "instructor": "Emily Thompson",
+      "seats_available": 7,
+      "price": 69.99,
+      "number_student":10
+    },
+    {
+      "image": "https://i.ibb.co/fpQD8z7/banner7.jpg",
+      "name": "Flamenco Dance",
+      "instructor": "Robert Martinez",
+      "seats_available": 9,
+      "price": 129.99,
+      "number_student":20
+    },
+    {
+      "image": "https://i.ibb.co/wQ9T7nb/banner8.jpg",
+      "name": "Ballroom Dance",
+      "instructor": "Jennifer Brown",
+      "seats_available": 4,
+      "price": 109.99,
+      "number_student":40
+    },
+    {
+      "image": "https://i.ibb.co/jJxX6Yn/banner9.jpg",
+      "name": "Bharatanatyam Dance",
+      "instructor": "William Thompson",
+      "seats_available": 6,
+      "price": 59.99,
+      "number_student":23
+    },
+    {
+      "image": "https://i.ibb.co/K21Xj3h/banner10.jpg",
+      "name": "Break Dance",
+      "instructor": "Karen Anderson",
+      "seats_available": 15,
+      "price": 139.99,
+      "number_student":39
+    },
+    {
+      "image": "https://example.com/image11.jpg",
+      "name": "Course 11",
+      "instructor": "Richard Wilson",
+      "seats_available": 2,
+      "price": 49.99
+    },
+    {
+      "image": "https://example.com/image12.jpg",
+      "name": "Course 12",
+      "instructor": "Jessica Lee",
+      "seats_available": 11,
+      "price": 89.99
+    },
+    {
+      "image": "https://example.com/image13.jpg",
+      "name": "Course 13",
+      "instructor": "Thomas Davis",
+      "seats_available": 13,
+      "price": 119.99
+    },
+    {
+      "image": "https://example.com/image14.jpg",
+      "name": "Course 14",
+      "instructor": "Elizabeth Smith",
+      "seats_available":45
+    },
+
+    {
+      "image": "https://example.com/image14.jpg",
+      "name": "Course 14",
+      "instructor": "Elizabeth Smith",
+      "seats_available": 1,
+      "price": 79.99
+    }
+  ]
+

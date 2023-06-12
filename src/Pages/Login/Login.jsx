@@ -1,13 +1,18 @@
 /* eslint-disable react/no-unknown-property */
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { useContext } from 'react';
 import { toast } from "react-toastify";
 import { Helmet} from "react-helmet-async";
 import { AuthContext } from './../../Providers/AuthProviders';
 
+
+
 const Login = () => {
   const { userLogin, setUser,LoginWithGoogle } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location?.from?.state?.pathname || "/"
 
   const handleLogin = (data) => {
     const {email,password} = data
@@ -25,6 +30,7 @@ const Login = () => {
         progress: undefined,
         theme: "light",
       });
+      navigate(from, {replace:true});
       reset();
     })
     .catch(error=>{
@@ -57,6 +63,7 @@ const Login = () => {
         progress: undefined,
         theme: "light",
       });
+      navigate(from, { replace: true });
     })
     .catch(error=>{
       toast.error(error.message, {

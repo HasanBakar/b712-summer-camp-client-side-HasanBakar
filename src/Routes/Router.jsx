@@ -10,6 +10,7 @@ import Classes from './../Pages/Classes/Classes';
 import Admin from './../Pages/Dashboard/Admin/Admin';
 import Student from './../Pages/Dashboard/Student/Student';
 import Instructor from './../Pages/Dashboard/Instructor/Instructor';
+import PrivateRoute from './PrivateRoute';
 
 export const router = createBrowserRouter([
   {
@@ -22,7 +23,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/instructors",
-        element: <Instructors></Instructors>,
+        element: (
+          <PrivateRoute>
+            <Instructors></Instructors>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/classes",
@@ -43,16 +48,16 @@ export const router = createBrowserRouter([
     element: <DashboardLayouts></DashboardLayouts>,
     children: [
       {
-        path:"admin",
-        element:<Admin></Admin>
+        path: "admin",
+        element: <Admin></Admin>,
       },
       {
-        path:"student",
-        element:<Student></Student>
+        path: "student",
+        element: <Student></Student>,
       },
       {
-        path:"instructor",
-        element:<Instructor></Instructor>
+        path: "instructor",
+        element: <Instructor></Instructor>,
       },
     ],
   },
