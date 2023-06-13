@@ -10,7 +10,7 @@ import Classes from './../Pages/Classes/Classes';
 import Admin from './../Pages/Dashboard/Admin/Admin';
 import Student from './../Pages/Dashboard/Student/Student';
 import Instructor from './../Pages/Dashboard/Instructor/Instructor';
-import PrivateRoute from './PrivateRoute';
+
 
 export const router = createBrowserRouter([
   {
@@ -23,11 +23,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/instructors",
-        element: (
-          <PrivateRoute>
-            <Instructors></Instructors>
-          </PrivateRoute>
-        ),
+        element: <Instructors></Instructors>,
       },
       {
         path: "/classes",
