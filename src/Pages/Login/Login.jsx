@@ -20,6 +20,7 @@ const Login = () => {
     .then(result=>{
       const user = result.user;
       setUser(user);
+      navigate(from, { replace: true });
       toast("Your login Successful with Email/Password", {
         position: "top-center",
         autoClose: 5000,
@@ -30,7 +31,6 @@ const Login = () => {
         progress: undefined,
         theme: "light",
       });
-      navigate(from, {replace:true});
       reset();
     })
     .catch(error=>{
@@ -53,17 +53,40 @@ const Login = () => {
     .then(result=>{
       const user = result.user;
       setUser(user);
-      toast("Your login Successful with Google", {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      console.log(user)
+      const userData = {
+        name: user?.displayName,
+        email: user?.email,
+        image: user?.photoURL,
+        userType: "student",
+      };
+      fetch(
+        "https://b7a12-summer-camp-server-side-hasan-bakar.vercel.app/users",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(userData),
+        }
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.insertedId) {
+            toast("Your login Successful with Google", {
+              position: "top-center",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            });
+          }
+        });
       navigate(from, { replace: true });
+      
     })
     .catch(error=>{
       toast.error(error.message, {

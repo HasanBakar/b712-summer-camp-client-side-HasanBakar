@@ -114,5 +114,108 @@
       "seats_available": 1,
       "price": 79.99
     }
-  ]
+  ],
+  [
+{
+"image": "https://i.ibb.co/N7w558C/banner1.png",
+"name": "Ballet Dance",
+"instructor": "John Doe",
+"seats_available": 10,
+"price": 99.99,
+"number_student": 29,
+"email":"johndoe@gmail.com"
+},
+{
+"image": "https://i.ibb.co/7XKqn5h/Banner2.jpg",
+"name": "Contemporary Dance",
+"instructor": "Jane Smith",
+"seats_available": 5,
+"price": 149.99,
+"number_student": 21,
+"email":"janesmith@gmail.com"
+},
+{
+"image": "https://i.ibb.co/Hq5cHfF/banner3.png",
+"name": "Hip Hop Dance",
+"instructor": "David Johnson",
+"seats_available": 8,
+"price": 79.99,
+"number_student": 24,
+"email":"davidjohnson@gmail.com"
+},
+{
+"image": "https://i.ibb.co/7Rmm1y0/banner4.png",
+"name": "Jazz Dance",
+"instructor": "Sarah Davis",
+"seats_available": 12,
+"price": 119.99,
+"number_student": 45,
+"email":"sarahdavis@gmail.com"
+},
+{
+"image": "https://i.ibb.co/3rFQNM2/banner5.jpg",
+"name": "Tap Dance",
+"instructor": "Michael Wilson",
+"seats_available": 3,
+"price": 89.99,
+"number_student": 25,
+"email":"michaelwilsom@gmail.com"
+},
+{
+"image": "https://i.ibb.co/Nrs9SzY/banner6.png",
+"name": "Salsa Dance",
+"instructor": "Emily Thompson",
+"seats_available": 7,
+"price": 69.99,
+"number_student": 10,
+"email":"emilythompson@gmail.com"
+},
+{
+"image": "https://i.ibb.co/fpQD8z7/banner7.jpg",
+"name": "Flamenco Dance",
+"instructor": "Robert Martinez",
+"seats_available": 9,
+"price": 129.99,
+"number_student": 20,
+"email":"robertmartinez@gmail.com"
+},
+{
+"image": "https://i.ibb.co/wQ9T7nb/banner8.jpg",
+"name": "Ballroom Dance",
+"instructor": "Jennifer Brown",
+"seats_available": 4,
+"price": 109.99,
+"number_student": 40,
+"email":"jenniferbrown@gmail.com"
+},
+{
+"image": "https://i.ibb.co/jJxX6Yn/banner9.jpg",
+"name": "Bharatanatyam Dance",
+"instructor": "William Thompson",
+"seats_available": 6,
+"price": 59.99,
+"number_student": 23,
+"email":"williamthompson@gmail.com"
+},
+{
+"image": "https://i.ibb.co/K21Xj3h/banner10.jpg",
+"name": "Break Dance",
+"instructor": "Karen Anderson",
+"seats_available": 15,
+"price": 139.99,
+"number_student": 39,
+"email":"karenanderson@gmail.com"
+},
+{"name":"Karen Anderson","email":"karenanderson@gmail.com","image":"https://i.ibb.co/h1DTFPZ/P3-OLGJ1-copy-1.png","userType":"Instructor"},
+
+{"name":"William Thompson","email":"williamthompson@gmail.com","image":"https://i.ibb.co/WHQdBjr/profile7.jpg","userType":"Instructor"},
+
+{"name":"Jennifer Brown","email":"jenniferbrown@gmail.com","image":"https://i.ibb.co/8x7TC49/profile3.jpg","userType":"Instructor"},
+
+{"name":"Robert Martinez","email":"robertmartinez@gmail.com","image":"https://i.ibb.co/dK111ch/profile8.jpg","userType":"Instructor"},
+
+{"name":"Emily Thompson","email":"emilythompson@gmail.com","image":"https://i.ibb.co/PhvnJLd/profile4.jpg","userType":"Instructor"},
+
+{"name":"Michael Wilsom","email":"michaelwilsom@gmail.com","image":"https://i.ibb.co/WHQdBjr/profile7.jpg","userType":"Instructor"}
+]
 

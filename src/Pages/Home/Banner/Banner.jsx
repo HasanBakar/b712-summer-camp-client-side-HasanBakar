@@ -15,6 +15,14 @@ const Banner = () => {
   return (
     <Carousel>
       <div>
+        <img src="https://i.ibb.co/CzSwQYc/slide4.webp" />
+        <p className="legend">
+          Ballroom: A partner dance style performed in social settings or
+          competitions. It includes dances like Waltz, Foxtrot, Tango, Rumba,
+          Cha-Cha, and Samba, each with its characteristic steps and music.
+        </p>
+      </div>
+      <div>
         <img src="https://i.ibb.co/sQZ6PMT/slide1.png" />
         <p className="legend">
           Ballet is a classical dance form that combines precise and graceful
@@ -36,14 +44,6 @@ const Banner = () => {
           Salsa: A vibrant and energetic social dance style originating from
           Latin America. It combines elements of Afro-Cuban dances with
           influences from jazz and other dance forms.
-        </p>
-      </div>
-      <div>
-        <img src="https://i.ibb.co/CzSwQYc/slide4.webp" />
-        <p className="legend">
-          Ballroom: A partner dance style performed in social settings or
-          competitions. It includes dances like Waltz, Foxtrot, Tango, Rumba,
-          Cha-Cha, and Samba, each with its characteristic steps and music.
         </p>
       </div>
       <div>

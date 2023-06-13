@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import { useContext } from 'react';
 import { AuthContext } from './../../../Providers/AuthProviders';
 
+
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
   const handleLogOut = ()=>{
@@ -57,7 +58,7 @@ toast("You are successfully LogOut!", {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm z-50 dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
                 <NavLink to="/">Home</NavLink>

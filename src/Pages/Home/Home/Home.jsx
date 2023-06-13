@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import Banner from './../Banner/Banner';
 import PopularClasses from './../PopularClasses/PopularClasses';
+import PopularInstructors from './../PopularInstructors/PopularInstructors';
 
 
 
@@ -24,6 +25,13 @@ const Home = () => {
           </div>
         </div>
         <PopularClasses></PopularClasses>
+        <div className="flex justify-center items-center my-10">
+          <div className="text-center">
+            <h3 className="text-3xl font-bold">Popular Instructors</h3>
+            <p>You can connect and build your public relationship!</p>
+          </div>
+        </div>
+        <PopularInstructors></PopularInstructors>
       </div>
     );
 };
