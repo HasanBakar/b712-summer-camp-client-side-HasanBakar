@@ -20,11 +20,14 @@ const DanceCompetition = () => {
               </Fade>
             </div>
             <Link
+              type="button"
               to="/register"
-              rel="noreferrer noopener"
-              className="px-5 mt-4 lg:mt-0 py-3 hover:bg-pink-500 rounded-md border block bg-gray-900 text-gray-50 border-gray-600"
+              className="relative px-8 py-4 ml-4 overflow-hidden font-semibold rounded bg-gray-800 hover:bg-white hover:text-gray-800 text-gray-50"
             >
-              Register now
+              Register
+              <span className="absolute top-0 right-0 px-5 py-1 text-xs tracki text-center uppercase whitespace-no-wrap origin-bottom-left transform rotate-45 -translate-y-full translate-x-1/3 bg-pink-600">
+                Now
+              </span>
             </Link>
           </div>
         </div>
