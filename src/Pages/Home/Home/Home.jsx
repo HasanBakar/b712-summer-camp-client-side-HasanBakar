@@ -3,6 +3,7 @@ import Banner from './../Banner/Banner';
 import PopularClasses from './../PopularClasses/PopularClasses';
 import PopularInstructors from './../PopularInstructors/PopularInstructors';
 import DanceCompetition from './../DanceCompetition/DanceCompetition';
+import Faq from './../FAQ/Faq';
 
 
 
@@ -34,6 +35,7 @@ const Home = () => {
           </div>
         </div>
         <PopularInstructors></PopularInstructors>
+        <Faq></Faq>
       </div>
     );
 };
