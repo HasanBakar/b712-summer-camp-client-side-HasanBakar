@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import Banner from './../Banner/Banner';
 import PopularClasses from './../PopularClasses/PopularClasses';
 import PopularInstructors from './../PopularInstructors/PopularInstructors';
+import DanceCompetition from './../DanceCompetition/DanceCompetition';
 
 
 
@@ -18,6 +19,7 @@ const Home = () => {
         <div>
           <Banner></Banner>
         </div>
+        <DanceCompetition></DanceCompetition>
         <div className="flex justify-center items-center my-10">
           <div className="text-center">
             <h3 className="text-3xl font-bold">Popular Classes</h3>
