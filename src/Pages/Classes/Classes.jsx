@@ -4,8 +4,8 @@ import useClasses from './../../hooks/useClasses';
 import Card from './../Shared/Card/Card';
 
 const Classes = () => {
-    const {classes} = useClasses();
-    console.log(classes)
+    const { classes } = useClasses();
+    // console.log(classes)
     return (
       <div className="sm:container sm:mx-auto">
         <Helmet>

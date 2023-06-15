@@ -8,7 +8,7 @@ const DanceCompetition = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between">
             <Slide>
               <h2 className="text-center text-4xl tracki font-bold">
-                Dance Competition is going on
+                Dance Course is going on
               </h2>
             </Slide>
             <div className="space-x-2 text-center py-2 lg:py-0">

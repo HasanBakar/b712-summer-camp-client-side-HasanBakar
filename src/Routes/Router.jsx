@@ -8,8 +8,10 @@ import Register from './../Pages/Register/Register';
 import Login from './../Pages/Login/Login';
 import Classes from './../Pages/Classes/Classes';
 import Admin from './../Pages/Dashboard/Admin/Admin';
-import Student from './../Pages/Dashboard/Student/Student';
 import Instructor from './../Pages/Dashboard/Instructor/Instructor';
+import StudentHome from './../Pages/Dashboard/Student/StudentHome';
+import MySelectedClasses from './../Pages/Dashboard/Student/MySelectedClasses';
+import MyEnrolledClasses from './../Pages/Dashboard/Student/MyEnrolledClasses';
 
 
 export const router = createBrowserRouter([
@@ -48,8 +50,16 @@ export const router = createBrowserRouter([
         element: <Admin></Admin>,
       },
       {
-        path: "student",
-        element: <Student></Student>,
+        path: "studentHome",
+        element: <StudentHome></StudentHome>,
+      },
+      {
+        path: "selectedClasses",
+        element: <MySelectedClasses></MySelectedClasses>,
+      },
+      {
+        path: "enrolledClasses",
+        element: <MyEnrolledClasses></MyEnrolledClasses>,
       },
       {
         path: "instructor",

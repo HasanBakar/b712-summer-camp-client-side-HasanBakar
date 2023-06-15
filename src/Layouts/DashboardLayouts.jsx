@@ -24,22 +24,22 @@ const DashboardLayouts = () => {
             <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
             <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
               <li>
-                <NavLink>
+                <NavLink to="/dashboard/studentHome">
                   <HiHome></HiHome> Student Home
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/selectedClasses">
+                <NavLink to="/dashboard/selectedClasses">
                   <HiAcademicCap></HiAcademicCap>My Selected Classes
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/enrolledClasses">
-                  <HiAcademicCap></HiAcademicCap>My Enrolled Classes
+                <NavLink to="/dashboard/enrolledClasses">
+                  <HiAcademicCap></HiAcademicCap>My Enrolled Classes 
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/paymentHistory">
+                <NavLink to="/dashboard/paymentHistory">
                   <HiOutlineWallet></HiOutlineWallet>My Payment History
                 </NavLink>
               </li>
