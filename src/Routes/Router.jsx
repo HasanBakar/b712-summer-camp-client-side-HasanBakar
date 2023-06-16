@@ -7,11 +7,14 @@ import Instructors from './../Pages/Instructors/Instructors';
 import Register from './../Pages/Register/Register';
 import Login from './../Pages/Login/Login';
 import Classes from './../Pages/Classes/Classes';
-import Admin from './../Pages/Dashboard/Admin/Admin';
-import Instructor from './../Pages/Dashboard/Instructor/Instructor';
-import StudentHome from './../Pages/Dashboard/Student/StudentHome';
+import DashboardHome from "./../Pages/Shared/DashboardHome/DashboardHome";
 import MySelectedClasses from './../Pages/Dashboard/Student/MySelectedClasses';
 import MyEnrolledClasses from './../Pages/Dashboard/Student/MyEnrolledClasses';
+import PaymentHistory from './../Pages/Dashboard/Student/PaymentHistory';
+import MyClasses from './../Pages/Dashboard/Instructor/MyClasses';
+import AddAClass from './../Pages/Dashboard/Instructor/AddAClass';
+import ManageClasses from './../Pages/Dashboard/Admin/ManageClasses';
+import ManageUsers from './../Pages/Dashboard/Admin/ManageUsers';
 
 
 export const router = createBrowserRouter([
@@ -46,12 +49,20 @@ export const router = createBrowserRouter([
     element: <DashboardLayouts></DashboardLayouts>,
     children: [
       {
-        path: "admin",
-        element: <Admin></Admin>,
+        path: "adminHome",
+        element: <DashboardHome></DashboardHome>,
+      },
+      {
+        path: "manageClasses",
+        element: <ManageClasses></ManageClasses>,
+      },
+      {
+        path: "manageUsers",
+        element: <ManageUsers></ManageUsers>,
       },
       {
         path: "studentHome",
-        element: <StudentHome></StudentHome>,
+        element: <DashboardHome></DashboardHome>,
       },
       {
         path: "selectedClasses",
@@ -62,8 +73,20 @@ export const router = createBrowserRouter([
         element: <MyEnrolledClasses></MyEnrolledClasses>,
       },
       {
-        path: "instructor",
-        element: <Instructor></Instructor>,
+        path: "paymentHistory",
+        element: <PaymentHistory></PaymentHistory>,
+      },
+      {
+        path: "instructorHome",
+        element: <DashboardHome></DashboardHome>,
+      },
+      {
+        path: "MyClasses",
+        element: <MyClasses></MyClasses>,
+      },
+      {
+        path: "AddAClass",
+        element: <AddAClass></AddAClass>,
       },
     ],
   },

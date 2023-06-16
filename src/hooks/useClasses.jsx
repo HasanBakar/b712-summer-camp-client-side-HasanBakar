@@ -1,16 +1,8 @@
 
 import { useState, useEffect } from "react";
-/*
-
-import {
-  useQuery,
-} from "@tanstack/react-query";
-*/
-
-
-
 const useClasses = () => {
   const [classes, setClasses] = useState([]);
+  
 
   useEffect(() => {
     fetch(
